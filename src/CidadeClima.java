@@ -1,14 +1,20 @@
     public class CidadeClima {
-    String cidade;
-    int temperatura;
-    String condicao;
+    private String cidade;
+    private int temperatura;
+    private String condicao;
 
         public CidadeClima(String cidade, int temperatura, String condicao) {
             this.cidade = cidade;
             this.temperatura = temperatura;
             this.condicao = condicao;
         }
+        public  void exibir(){
+            System.out.println("Cidade: " + cidade);
+            System.out.println("Temperatura: " + temperatura);
+            System.out.println("Condiçao: " + condicao);
+            System.out.println();
 
+        }
         public String getCidade() {
             return cidade;
         }
