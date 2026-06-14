@@ -36,8 +36,13 @@ public class Main {
                     for (CidadeClima cidadeClima : cidadeClimas) {
                         cidadeClima.exibir();
                     }
+                    if (cidadeClimas.size() == 0){
+                        System.out.println("Nenhuma cidade cadastrada.");
+                    }
                     input.nextLine();
                     break;
+                case 3:
+
 
             }
         }
