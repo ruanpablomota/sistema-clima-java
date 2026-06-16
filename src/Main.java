@@ -33,9 +33,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("\n=== CLIMAS CADASTRADOS ===");
-                    for (CidadeClima cidadeClima : cidadeClimas) {
-                        cidadeClima.exibir();
-                    }
+
                     if (cidadeClimas.isEmpty()) {
                         System.out.println("Nenhuma cidade cadastrada.");
                     } else {
@@ -43,8 +41,10 @@ public class Main {
                             cidadeClima.exibir();
                         }
                     }
+
                     input.nextLine();
                     break;
+
                 case 3:
                     System.out.println("\n=== BUSCAR CIDADE ===");
                     System.out.print("Digite o nome da cidade: ");
