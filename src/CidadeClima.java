@@ -9,9 +9,9 @@
             this.condicao = condicao;
         }
         public  void exibir(){
-            System.out.println("Cidade: " + cidade);
-            System.out.println("Temperatura: " + temperatura);
-            System.out.println("Condiçao: " + condicao);
+            System.out.println("Cidade: " + getCidade());
+            System.out.println("Temperatura: " + getTemperatura());
+            System.out.println("Condiçao: " + getCondicao());
             System.out.println();
 
         }

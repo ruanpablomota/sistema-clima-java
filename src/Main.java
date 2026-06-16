@@ -36,18 +36,44 @@ public class Main {
                     for (CidadeClima cidadeClima : cidadeClimas) {
                         cidadeClima.exibir();
                     }
-                    if (cidadeClimas.size() == 0){
+                    if (cidadeClimas.isEmpty()) {
                         System.out.println("Nenhuma cidade cadastrada.");
+                    } else {
+                        for (CidadeClima cidadeClima : cidadeClimas) {
+                            cidadeClima.exibir();
+                        }
                     }
                     input.nextLine();
                     break;
                 case 3:
+                    System.out.println("\n=== BUSCAR CIDADE ===");
+                    System.out.print("Digite o nome da cidade: ");
 
+                    String cidadeBuscada = input.nextLine();
 
+                    boolean encontrada = false;
+
+                    for (CidadeClima cidadeClima : cidadeClimas) {
+
+                        if (cidadeClima.getCidade().equalsIgnoreCase(cidadeBuscada)) {
+
+                            System.out.println("\n Cidade encontrada!");
+                            cidadeClima.exibir();
+
+                            encontrada = true;
+                            break;
+                        }
+                    }
+                    if (!encontrada) {
+                        System.out.println("Cidade  não encontrada.");
+                    }
+
+                    break;
             }
-        }
 
+        }
     }
+
 
     static void exibirMenu() {
         System.out.println("\n===== SISTEMA DE CLIMA =====");
