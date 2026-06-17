@@ -108,7 +108,7 @@ public class Main {
                     cidadeBuscada = input.nextLine();
                     boolean removida = false;
                     for (int i = 0; i < cidadeClimas.size(); i++) {
-                        if(cidadeClimas.get(i).getCidade().equalsIgnoreCase(cidadeBuscada)){
+                        if (cidadeClimas.get(i).getCidade().equalsIgnoreCase(cidadeBuscada)) {
                             cidadeClimas.remove(i);
 
                             removida = true;
@@ -118,14 +118,18 @@ public class Main {
                         }
                     }
 
-                    if (!removida){
+                    if (!removida) {
                         System.out.println("Cidade não encontrada.");
                     }
-
+                    break;
+                case 6:
+                    System.out.println("\nEncerrando o sistema...");
+                    System.out.println("Obrigado por utilizar o Sistema de Clima!");
+                    return;
             }
-
         }
     }
+
 
 
     static void exibirMenu() {
