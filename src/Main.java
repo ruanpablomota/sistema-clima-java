@@ -101,6 +101,26 @@ public class Main {
                     }
 
                     break;
+                case 5:
+                    System.out.println("\n=== REMOVER CIDADE ===");
+                    System.out.print("Digite o nome da cidade que deseja remover: ");
+
+                    cidadeBuscada = input.nextLine();
+                    boolean removida = false;
+                    for (int i = 0; i < cidadeClimas.size(); i++) {
+                        if(cidadeClimas.get(i).getCidade().equalsIgnoreCase(cidadeBuscada)){
+                            cidadeClimas.remove(i);
+
+                            removida = true;
+                            System.out.println("Cidade removida com sucesso!");
+
+                            break;
+                        }
+                    }
+
+                    if (!removida){
+                        System.out.println("Cidade não encontrada.");
+                    }
 
             }
 
