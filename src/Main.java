@@ -69,6 +69,39 @@ public class Main {
                     }
 
                     break;
+
+                case 4:
+                    System.out.println("\n=== ATUALIZAR CLIMA ===");
+                    System.out.print("Digite o nome da cidade que deseja atualizar: ");
+
+                    cidadeBuscada = input.nextLine();
+                    boolean temNoSistema = false;
+                    for (CidadeClima cidadeClima : cidadeClimas) {
+                        if (cidadeClima.getCidade().equalsIgnoreCase(cidadeBuscada)) {
+                            System.out.println("Nova temperatura:");
+                            int novaTemperatura = input.nextInt();
+                            input.nextLine();
+
+                            System.out.println("Nova condição:");
+                            String novaCondiçao = input.nextLine();
+
+
+                            cidadeClima.setCondicao(novaCondiçao);
+                            cidadeClima.setTemperatura(novaTemperatura);
+                            System.out.println("Clima atualizado com sucesso!");
+                            cidadeClima.exibir();
+                            temNoSistema = true;
+                            break;
+                        }
+
+
+                    }
+                    if (!temNoSistema) {
+                        System.out.println("Cidade não encontrada");
+                    }
+
+                    break;
+
             }
 
         }
